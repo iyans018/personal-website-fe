@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 interface Menu {
     name: string;
@@ -12,6 +12,7 @@ const Navbar = () => {
         { name: 'Articles', url: '/articles' },
         { name: 'About Me', url: '/aboutme' }
     ];
+    const location = useLocation();
 
     return (
         <nav className="fixed top-0 z-50 px-10 py-2 md:px-20 md:py-4 border-b min-w-full flex flex-row items-center bg-dark justify-between">
@@ -25,8 +26,7 @@ const Navbar = () => {
                     <li key={`menu-${index}`}>
                         <NavLink 
                             to={item.url} 
-                            className="font-medium hover:text-orange cursor-pointer"
-                            style={({ isActive }) => isActive ? { color: '#FFB742' } : { color: 'white' }}
+                            className={`font-medium hover:text-orange cursor-pointer ${location.pathname == item.url ? 'text-orange' : 'text-white'}`}
                         >
                             {item.name}
                         </NavLink>
