@@ -67,9 +67,11 @@ const Home = () => {
                     <ProjectCard />
                     <ProjectCard />
                 </div>
-                <div className="flex w-full">
-                    <Button style={{ width: '100%' }} text="See More Projects" />
+                <div className="flex justify-center">
+                    <Button text="See More Projects" />
                 </div>
+                {/* <div className="flex">
+                </div> */}
             </section>
             <section className="bg-dark min-h-screen flex items-center px-10 pb-10 md:px-20" id="contact-me">
                 <div className="w-full flex flex-col gap-5 md:gap-0 md:flex-row md:justify-between items-start">
