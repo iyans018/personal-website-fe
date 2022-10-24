@@ -1,8 +1,8 @@
+import { Maintenance } from '../components/template';
+
 const Articles = () => {
     return (
-        <div>
-            Articles Page
-        </div>
+        <Maintenance />
     )
 }
 
