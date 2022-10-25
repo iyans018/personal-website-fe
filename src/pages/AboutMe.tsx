@@ -101,8 +101,8 @@ const AboutMe = () => {
                             message broker and that don't. Also, I love exploring new technology commonly used on the <b>back end</b>.
                         </p>
                         <div id="links-icon" className="flex flex-row gap-7 justify-center md:justify-start">
-                            {links.map(link => (
-                                <a href={link.src} target="_blank" rel="noreferrer">
+                            {links.map((link, index) => (
+                                <a key={`${link.name}-${index}`} href={link.src} target="_blank" rel="noreferrer">
                                     {link.icon}
                                 </a>
                             ))}
@@ -115,26 +115,26 @@ const AboutMe = () => {
                     <Badge text="SKILLS"/>
                 </div>
                 <div id="proramming-language" className="mb-4">
-                    <h1 className="text-orange text-2xl font-bold">Programming Language</h1>
-                    <div className="flex flex-row mt-2 gap-5" id="programming-language-icons">
+                    <h1 className="text-orange text-2xl font-bold mb-2">Programming Language</h1>
+                    <div className="grid grid-cols-4 gap-5 md:flex md:flex-row" id="programming-language-icons">
                         {programmingLanguages.map(item => item.icon)}
                     </div>
                 </div>
                 <div id="frameworks" className="mb-4">
-                    <h1 className="text-orange text-2xl font-bold">Frameworks</h1>
-                    <div className="flex flex-row mt-2 gap-5" id="programming-language-icons">
+                    <h1 className="text-orange text-2xl font-bold mb-2">Frameworks</h1>
+                    <div className="grid grid-cols-4 gap-5 md:flex md:flex-row" id="frameworks-icons">
                         {frameworks.map(framework => framework.icon)}
                     </div>
                 </div>
                 <div id="databases" className="mb-4">
-                    <h1 className="text-orange text-2xl font-bold">Databases</h1>
-                    <div className="flex flex-row mt-2 gap-5" id="programming-language-icons">
+                    <h1 className="text-orange text-2xl font-bold mb-2">Databases</h1>
+                    <div className="grid grid-cols-4 gap-5 md:flex md:flex-row" id="databases-icons">
                         {databases.map(database => database.icon)}
                     </div>
                 </div>
                 <div id="other-technologies" className="mb-4">
-                    <h1 className="text-orange text-2xl font-bold">Other Technologies</h1>
-                    <div className="flex flex-row mt-2 gap-5" id="programming-language-icons">
+                    <h1 className="text-orange text-2xl font-bold mb-2">Other Technologies</h1>
+                    <div className="grid grid-cols-4 gap-5 md:flex md:flex-row" id="other-technologies-icons">
                         {otherTechnologies.map(item => item.icon)}
                     </div>
                 </div>
