@@ -1,4 +1,4 @@
-const Bedge = ({ text, ...rest }: any) => {
+const Badge = ({ text, ...rest }: any) => {
     return (
         <p className="text-orange font-bold rounded-full bg-dark-50 px-5 py-1.5 w-fit" {...rest}>
             {text}
@@ -6,4 +6,4 @@ const Bedge = ({ text, ...rest }: any) => {
     )
 }
 
-export default Bedge;
+export default Badge;

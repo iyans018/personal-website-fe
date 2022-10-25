@@ -1,8 +1,5 @@
 import React from "react";
-import Bedge from "../components/Badge"
-import Button from "../components/Button";
-import Input from "../components/Input";
-import ProjectCard from "../components/ProjectCard";
+import { Badge, Button, Input, ProjectCard } from '../components';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
 
 import { 
@@ -44,7 +41,7 @@ const Home = () => {
             </section>
             <section id="my-skills" className="bg-dark min-h-screen px-10 md:px-20 flex flex-col justify-center md:flex-row md:justify-between md:items-center">
                 <div>
-                    <Bedge text="MY SKILLS" />
+                    <Badge text="MY SKILLS" />
                     <h1 className="mt-2 text-white text-2xl md:text-5xl font-bold mb-7">What My Programming <br /> Skills Included?</h1>
                     <p className="text-white text-base mb-16">I develop simple, intuitive and responsive web app that help users get things <br /> done with les effort and time with those technologies.</p>
                     <Button text="Hire Me" />
@@ -59,7 +56,7 @@ const Home = () => {
             </section>
             <section className="bg-dark min-h-screen flex flex-col gap-8 px-10 py-10 md:px-20" id="my-projects">
                 <div className="w-full flex flex-col justify-center items-center">
-                    <Bedge text="MY PROJECTS" />
+                    <Badge text="MY PROJECTS" />
                     <h1 className="mt-2 text-white text-2xl md:text-5xl font-bold">Featured Projects</h1>    
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-3 gap-5">
@@ -70,16 +67,14 @@ const Home = () => {
                 <div className="flex justify-center">
                     <Button text="See More Projects" />
                 </div>
-                {/* <div className="flex">
-                </div> */}
             </section>
             <section className="bg-dark min-h-screen flex items-center px-10 pb-10 md:px-20" id="contact-me">
                 <div className="w-full flex flex-col gap-5 md:gap-0 md:flex-row md:justify-between items-start">
                     <div className="w-full md:w-2/4 flex flex-col justify-start gap-5">
-                        <Bedge text="MY CONTACT" />
+                        <Badge text="MY CONTACT" />
                         <h1 className="text-white text-2xl md:text-5xl font-bold">Contact Me</h1>
                         <p className="text-white text-base font-medium">I develop Frontend and Backend Web App. You can reach me out by e-mail <br /> to <span className="text-orange">oktavian.aji18@gmail.com</span> or WhatsApp at button below or fill out the form. Let’s get in touch! 😉</p>
-                        <a href="https://api.whatsapp.com/send/?phone=6289643371072" target="_blank">
+                        <a href="https://api.whatsapp.com/send/?phone=6289643371072" target="_blank" rel="noreferrer">
                             <Button icon={<AiOutlineWhatsApp size={25} />} text="WHATSAPP" />
                         </a>
                     </div>

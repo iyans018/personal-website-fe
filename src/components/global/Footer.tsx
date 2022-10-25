@@ -12,12 +12,14 @@ const Footer = () => {
         { name: 'Articles', url: '/articles' },
         { name: 'About Me', url: '/aboutme' }
     ];
+    
     const socialMedia: Array<Menu> = [
         { name: 'Instagram', url: 'https://www.instagram.com/iyans018/' },
         { name: 'Twitter', url: 'https://twitter.com/Iyans018' },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/in/oktavian-aji-3a43b0216/' },
         { name: 'GitHub', url: 'https://github.com/iyans018' }
     ];
+
     const year = new Date().getFullYear();
 
     return (
@@ -30,15 +32,17 @@ const Footer = () => {
                 <div className="flex flex-col gap-2" id="useful-links">
                     <h1 className="text-slate-100 text-xl font-bold mb-3">Useful Links</h1>
                     {usefulLinks.map((link, index) => (
-                        <Link key={`useful-links-${index}`} to={link.url}>
-                            <a className="cursor-pointer text-gray-600 font-medium hover:text-gray-400">{link.name}</a>
+                        <Link className="cursor-pointer text-gray-600 font-medium hover:text-gray-400" key={`useful-links-${index}`} to={link.url}>
+                            {link.name}
                         </Link>
                     ))}
                 </div>
                 <div className="flex flex-col gap-2" id="social-media">
                     <h1 className="text-slate-100 text-xl font-bold mb-3">Social Media</h1>
                     {socialMedia.map((link, index) => (
-                        <a key={`social-media-${index}`} href={link.url} target="_blank" className="cursor-pointer text-gray-600 font-medium hover:text-gray-400">{link.name}</a>
+                        <a key={`social-media-${index}`} href={link.url} rel="noreferrer" className="cursor-pointer text-gray-600 font-medium hover:text-gray-400">
+                            {link.name}
+                        </a>
                     ))}
                 </div>
             </div>
