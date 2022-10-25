@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoGithub } from 'react-icons/io5';
-import { MdEmail } from 'react-icons/md';
+import { MdEmail, MdOutlineWork } from 'react-icons/md';
 import { 
     SiPython, SiCss3, SiHtml5, SiJava, SiJavascript, SiPhp, 
     SiTypescript, SiDjango, SiPostgresql, SiNodedotjs,
@@ -8,6 +8,7 @@ import {
     SiLaravel, SiTailwindcss, SiBootstrap, SiMysql, SiMongodb, 
     SiSqlite, SiDocker, SiRedis, SiLinux, SiRabbitmq,
 } from 'react-icons/si';
+import { GiGraduateCap } from 'react-icons/gi';
 import { Badge } from '../components';
 
 interface Links {
@@ -40,7 +41,7 @@ const AboutMe = () => {
         }
     ];
 
-    const programmingLanguage: Array<Links> = [
+    const programmingLanguages: Array<Links> = [
         { name: "Python", icon: <SiPython size={50} color="white" /> },
         { name: "JavaScript", icon: <SiJavascript size={50} color="white" /> },
         { name: "TypeScript", icon: <SiTypescript size={50} color="white" /> },
@@ -116,7 +117,7 @@ const AboutMe = () => {
                 <div id="proramming-language" className="mb-4">
                     <h1 className="text-orange text-2xl font-bold">Programming Language</h1>
                     <div className="flex flex-row mt-2 gap-5" id="programming-language-icons">
-                        {programmingLanguage.map(item => item.icon)}
+                        {programmingLanguages.map(item => item.icon)}
                     </div>
                 </div>
                 <div id="frameworks" className="mb-4">
@@ -136,6 +137,136 @@ const AboutMe = () => {
                     <div className="flex flex-row mt-2 gap-5" id="programming-language-icons">
                         {otherTechnologies.map(item => item.icon)}
                     </div>
+                </div>
+            </section>
+            <section id="experiences-and-education" className="bg-dark min-h-screen flex flex-col px-10 py-4 gap-4 md:px-20 md:flex md:flex-row md:justify-between">
+                <div id="exepriences" className="w-full mb-10 md:mb-0 md:w-1/2">
+                    <div className="flex flex-col mb-4">
+                        <Badge text="EXPERIENCES" />
+                    </div>
+                    <div>
+                        <div className="flex flex-col">
+                            <div className="flex row gap-5 items-center">
+                                <div className="flex items-center justify-center w-16 bg-orange h-16 rounded-full">
+                                    <MdOutlineWork size={30} />
+                                </div>
+                                <p className="mb-2 text-xl font-bold text-white">Working History</p>
+                            </div>
+                            <div className="flex row items-center">
+                                <div className="ml-8 w-px h-10 bg-gray-300"></div>
+                            </div>
+                        </div>
+                        <div className="flex ml-6">
+                            <div className="flex flex-col items-center mr-4">
+                                <div>
+                                    <div className="flex items-center justify-center w-4 h-4 border-2 border-orange rounded-full"></div>
+                                </div>
+                                <div className="w-px h-full bg-gray-300"></div>
+                            </div>
+                            <div className="pb-8 ">
+                                <p className="text-xl font-bold text-white">Software Developer Internship Training - Glints Academy</p>
+                                <p className="mb-2 text-lg font-medium text-gray-200">Aug 2021 - Feb 2022</p>
+                                <p className="text-gray-400">
+                                    - Learn agile methodology to be applied immediately when starting the internship.<br/>
+                                    - Learn Git and GitHub to write code with the team.<br/>
+                                    - Create a mini project with a team as an exercise to implement things that havebeen taught.<br/>
+                                    - Attend all meetings and do assignments where the material is made to improve our soft skills.<br/>
+                                    - 1on1 mentoring session to ask for advice and learn about technical matters experienced during the internship.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex ml-6">
+                            <div className="flex flex-col items-center mr-4">
+                                <div>
+                                    <div className="flex items-center justify-center w-4 h-4 border-2 border-orange rounded-full"></div>
+                                </div>
+                                <div className="w-px h-full bg-gray-300"></div>
+                            </div>
+                            <div className="pb-8 ">
+                                <p className="text-xl font-bold text-white">Full Stack Developer - Ravenry</p>
+                                <p className="mb-2 text-lg font-medium text-gray-200">Sept 2021 - Feb 2022</p>
+                                <p className="text-gray-400">
+                                    - Develop and maintain internal web apps..<br/>
+                                    - Develop product using Scrum methodology..<br/>
+                                    - Build new features and update existing features at the backend using Node.js.<br/>
+                                    - Enhance performance in the backend by modifying the queries database.<br/>
+                                    - Convert design to code (including API consumption) at the front end using React.js. <br/>
+                                    - Create a test case for E2E testing and implement it at the front end using Cypress. <br/>
+                                    - Code review and fixing bugs. <br/>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex ml-6">
+                            <div className="flex flex-col items-center mr-4">
+                                <div>
+                                    <div className="flex items-center justify-center w-4 h-4 border-2 border-orange rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="education" className="w-full md:w-1/2">
+                    <div className="flex flex-col mb-4">
+                        <Badge text="EDUCATION" />
+                    </div>
+                    <div>
+                        <div className="flex flex-col">
+                            <div className="flex row gap-5 items-center">
+                                <div className="flex items-center justify-center w-16 bg-orange h-16 rounded-full">
+                                    <GiGraduateCap size={30} />
+                                </div>
+                                <p className="mb-2 text-xl font-bold text-white">Education History</p>
+                            </div>
+                            <div className="flex row items-center">
+                                <div className="ml-8 w-px h-10 bg-gray-300"></div>
+                            </div>
+                        </div>
+                        <div className="flex ml-6">
+                            <div className="flex flex-col items-center mr-4">
+                                <div>
+                                    <div className="flex items-center justify-center w-4 h-4 border-2 border-orange rounded-full"></div>
+                                </div>
+                                <div className="w-px h-full bg-gray-300"></div>
+                            </div>
+                            <div className="pb-8 ">
+                                <p className="text-xl font-bold text-white">Vocational High School Muhammadiyah 4 West Jakarta</p>
+                                <p className="mb-2 text-lg font-medium text-gray-200">Jun 2015 - Mei 2018</p>
+                                <p className="text-gray-400">
+                                    Successfully passed with the highest national exam scores in the computer and network engineering department and managed to 
+                                    get a certificate of competence.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex ml-6">
+                            <div className="flex flex-col items-center mr-4">
+                                <div>
+                                    <div className="flex items-center justify-center w-4 h-4 border-2 border-orange rounded-full"></div>
+                                </div>
+                                <div className="w-px h-full bg-gray-300"></div>
+                            </div>
+                            <div className="pb-8 ">
+                                <p className="text-xl font-bold text-white">Pamulang University South Tangerang</p>
+                                <p className="mb-2 text-lg font-medium text-gray-200">Sept 2018 - Aug 2022</p>
+                                <p className="text-gray-400">
+                                   Graduated with GPA 3.53/4.00 with the thesis title is "Performance Analysis of Publish-Subscribe Model Using RabbitMQ For 
+                                   Asynchronous Service Communication In Microservice E-Commerce" and have participated in the Kampus Merdeka certified internship 
+                                   program in batch 1.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex ml-6">
+                            <div className="flex flex-col items-center mr-4">
+                                <div>
+                                    <div className="flex items-center justify-center w-4 h-4 border-2 border-orange rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="certifications" className="bg-dark min-h-screen px-10 py-4 md:px-20">
+                <div className="flex flex-col">
+                    <Badge text="CERTIFICATIONS" />
                 </div>
             </section>
         </>
