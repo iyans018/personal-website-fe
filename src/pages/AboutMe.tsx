@@ -2,12 +2,13 @@ import React from 'react';
 import { IoLogoLinkedin, IoLogoTwitter, IoLogoGithub } from 'react-icons/io5';
 import { MdEmail, MdOutlineWork } from 'react-icons/md';
 import { 
-    SiPython, SiCss3, SiHtml5, SiJava, SiJavascript, SiPhp, 
+    SiPython, SiCss3, SiHtml5, SiJavascript, SiPhp, 
     SiTypescript, SiDjango, SiPostgresql, SiNodedotjs,
     SiExpress, SiNestjs, SiReact, SiFlask, SiFastapi,
     SiLaravel, SiTailwindcss, SiBootstrap, SiMysql, SiMongodb, 
     SiSqlite, SiDocker, SiRedis, SiLinux, SiRabbitmq,
 } from 'react-icons/si';
+import { DiJava } from "react-icons/di";
 import { GiGraduateCap } from 'react-icons/gi';
 import { Badge } from '../components';
 
@@ -46,7 +47,7 @@ const AboutMe = () => {
         { name: "JavaScript", icon: <SiJavascript size={50} color="white" /> },
         { name: "TypeScript", icon: <SiTypescript size={50} color="white" /> },
         { name: "PHP", icon: <SiPhp size={50} color="white" /> },
-        { name: "Java", icon: <SiJava size={50} color="white" /> },
+        { name: "Java", icon: <DiJava size={50} color="white" /> },
         { name: "HTML", icon: <SiHtml5 size={50} color="white" /> },
         { name: "CSS", icon: <SiCss3 size={50} color="white" /> },
     ];
